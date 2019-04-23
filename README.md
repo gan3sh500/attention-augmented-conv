@@ -8,4 +8,5 @@ To use the layer:
 from layer import augmented_conv2d
 ```
 The paper has shows promising results, especially below:
+
 ![ResNet-50 improvements](fig/res.png)
