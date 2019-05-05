@@ -76,7 +76,7 @@ def rel_to_abs(x):
 
 def augmented_conv2d(X, Fout, k, dk, dv, Nh, relative):
     conv_out = tf.layers.conv2d(X, Fout − dv, k)
-    flat_q, flat_k, flat_v = compte_flat_qkv(X, dk, dv)
+    flat_q, flat_k, flat_v = compute_flat_qkv(X, dk, dv)
     logits = tf.matmul(flat_ q, flat_k, transpose_b=True)
     if relative:
         h_rel_logits, w_rel_logits = relative_logits(q)
